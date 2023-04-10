@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}What is the Container Technology?{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is the Container Technology?">{% endblock %}
+{% block description %}<meta name="description" content="How does the container technology work? What are the most popular container technology providers? What is Docker? What is Kubernetes?">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="How does the container technology work? What are the most popular container technology providers? What is Docker? What is Kubernetes?">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/container-technology/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/container-technology/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="container technology, docker, ec2, amazon ec2, google, google compute engine, google cloud, kubernetes, container, technology, linux">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">What is the Container Technology?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/container1.jpg" alt="container1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is the Container Technology?</h2>
+            <p class="h5">
+                As a short description, we can say that the container technology is a virtual environment for software programs and web applications.
+                It is a modern equivalent for traditional web servers and computers. It is designed to host different applications in a container environment with all its dependencies.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">The problem before the container technology.</h2>
+            <p class="h5">
+              In this section we will reveal why the container technology is a revolutionary solution for businesses and software companies.
+              Before the container technology, people used to develop and host their software applications on a traditional web server with operating system or they could develop their applications on a local computer.
+              In either way, these was one obvious problem present for them. Normally, the employees working for a usual software company use different model of computers with variety type of operating systems running on them.
+              Moreover, some of these employees are working remotely from home, or working with a hybrid work model, adding extra complexity to the problem.
+            </p>
+            <br/>
+            <p class="h5">
+              The main problem is that when all these employees install the common work environment or enter to the same online system to perform different tasks, they usually face many missing dependencies or compatibility issues which takes ages to solve or in some cases, it is even impossible to fix them.
+              To prevent this kind of problem, the container technology offers an exceptional solution: all the employees in the company install the same container application and work on a similar virtual container environment where all the application dependencies are provided inside the container.
+              In this way, regardless of the computer model and the operating system running on that computer, all the company employees work inside the similar virtual environment.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How does the container technology work?</h2>
+            <p class="h5">
+              In usual container technology, you start your journey by installing the application of the relevant container environment provider from its website.
+              After installing the application, complete a simple setup process and start the application. Then, you will need to create a special package bundle of your software application, called an <b>image</b> in container terminology.
+              After that, you will be able to run your developed application in a container environment on a special port on your computer.
+              Please note that in order for the container app to be able to install all the dependencies of your software application, you will have to list all the dependencies of your app in a <b>requirements.txt</b> in your root directory before creating the image file for your app.
+              All these processes can sound very complicated to you, but normally you perform all the above tasks with the help of very simple commands.
+              For example, for Docker, the image creation script files are called <b>dockerfile</b> and to create synchronized containers you would need a standard YAML configuration file. Please find a sample <b>docker-compose.yml</b> file content below.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/docker-compose.png" alt="docker-compose" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <p class="h5">
+                If your hosting provider offer the container technology, you can run virtual containers as a production environment as well.
+                The biggest advantage of the container technology is that you do not need a maintenance mode like you need in a traditional hosting solutions.
+                You can work on your web application in a production environment without interrupting your online users.
+                You can easily create a copy of your production container and direct all your users to that container, while you work on the original container environment.
+            </p>
+        </div>
+            <br/>
+            <br/>
+        <div class="container">
+            <h2 class="text-primary">What are the most popular container technology providers?</h2>
+            <p class="h5">
+                <b>Docker</b>, <b>Google Cloud</b>, and <b>Amazon EC2</b> are among the most popular container based hosting providers.
+                The meaning of EC2 is Elastic Compute Cloud. It is a cloud based, containerized application hosting service provided by Amazon Web Services (AWS).
+                Docker is the main container technology provider which is used by many container based web hosting providers.
+                Similarly, Google offers Google Compute Engine as a virtual container based hosting technology.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is container auto scaling and how does it work?</h2>
+            <p class="h5">
+                Container auto scaling is a service provided by cloud based hosting providers like Google Cloud and AWS.
+                This service offers fast scaling abilities when the traffic to your hosted web application is in a high peak level.
+                When the traffic to your application increases suddenly and you need to increase the capacity of your application, auto scaling technology creates copies of the container where your web application is hosted as a quick response to the situation and handles the increased traffic level perfectly.
+                When the traffic decreases eventually, the auto scaling service removes the copies of your container and maintains the healthy balance of your traffic and the number of containers. This is usually managed by an auto scaling group policy.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is Kubernetes?</h2>
+            <p class="h5">
+                Kubernetes is a technology which creates a network of Docker containers and controls the synchronization and connection of the containers in the network.
+                We normally call this network a Kubernetes cluster. There is usually one master node and many slave nodes which replicates the master node.
+                There is only one entry point to the cluster, and it is managed by the master node.
+            </p>
+        </div>
+{% endblock %}

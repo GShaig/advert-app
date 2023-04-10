@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}SSL Certificate Advisor — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="SSL Certificate Advisor — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="SSL Certificate Advisor. Enter your SSL requirements in our form and get your SSL advice instantly. Single Domain, Multiple Domains or Wildcard SSL Certificate.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="SSL Certificate Advisor. Enter your SSL requirements in our form and get your SSL advice instantly. Single Domain, Multiple Domains or Wildcard SSL Certificate.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/ssl/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/ssl/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="ssl, ssl certificate, authority certificate, certificate authority, secure sockets layer, security, accept credit, website, wildcard, what's ssl, ssl certification, certificates ssl, certificate ssl, ssl vpns">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary url shadow-lg cont p-0" href="https://adverttools.com/url-shortener/"><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/ssl/"><img src="/static/images/ssl2.svg" alt="ssl" width="110%" height="110%" class="child"/><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary whois shadow-lg cont p-0" href="https://adverttools.com/whois/"><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary hosting shadow-lg cont p-0" href="https://adverttools.com/hosting/"><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary loc shadow-lg cont p-0" href="https://adverttools.com/location/"><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary ip shadow-lg cont p-0" href="https://adverttools.com/ip-lookup/"><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+              <h1 class="text-primary fw-bold">SSL Certificate</h1>
+
+                {% if best %}
+                <div class="bg-success p-4 m-4">
+                  <h2 class="text-white">Best SSL certificate for you:</h2>
+                  <h2 class="text-white"><b>{{ best }}</b></h2>
+                  <a href="{{ link }}" class="btn bg-white text-success btn-lg" target="_blank"><b>Get {{ best }}</b></a>
+                </div>
+                {% endif %}
+
+                <div>
+                  <form action="" method="post">
+                        {% csrf_token %}
+                        <div>
+                          <h5 class="text-primary">How many domains would you like to include in your SSL certificate?</h5>
+                          {{ form.num }}
+                          <h5 class="text-primary">Do you run multiple servers on a single domain?</h5>
+                          {{ form.serv }}
+                          <h5 class="text-primary">What type of website do you run?</h5>
+                          {{ form.site }}
+                        </div>
+                        <br/>
+                        <input type="submit" value="Send" class="btn btn-primary btn-lg shadow-lg" />
+                  </form>
+                </div>
+              </div>
+            </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use SSL Certificate Advisor?</h2>
+            <p class="h5">Answer the questions provided on the above form.</p>
+            <p class="h5">- Firstly, specify for how many domains you need SSL certificate.</p>
+            <p class="h5">- If you host multiple servers on a single domain, please answer 'YES' to 2nd question.</p>
+            <p class="h5">- Finally, tell us for what kind of website you need the SSl certificate.</p>
+            <p class="h5">After answering the questions, simply click on <span class="text-primary fw-bold">Send</span> button. Instantly, you will get the best SSL certificate tailored for your needs.</p>
+            <p class="h5">The tool evaluates your situation and requirements for SSL certificate and offer the best SSL solution for your project or website.</p>
+            <p class="h5">Please note that the results coming from this tool may not be 100% accurate and all suggestions offered from this tool are for guidance purposes only. Please analyze your own situation and make the final decision based on your knowledge and insights before buying your SSL certificate.</p>
+            <p class="h5">Under the SSL certificate name, you will find a green <span class="text-success fw-bold">BUY</span> button. If you click on the button, you will be directed to <a class="text-decoration-none fw-bold" target="_blank" href="https://namecheap.pxf.io/2rZ2gG">Namecheap</a> website where you can purchase your preferred SSL certificate.</p>
+            <p class="h5">If you experience any issue or difficulty after buying any type of SSL certificate from our affiliate partner, please do not hesitate to contact us on <b>info@adverttools.com</b> email address and discuss your situation. If you wish to contact us before buying your SSL certificate, this is also welcome from our side. Just send an email to us including all your questions. Thank you!</p>
+            <p class="h5">This tool does not give any information about free SSL certification options because it is a lot of work to obtain, install and renew a free SSL certificate manually. If you look for getting an SSL certificate free of charge, please visit Lets Encrypt website. But take into consideration that in this option you will be required to obtain and install your SSL certificate manually in every three months.</p>
+            <p class="h5">If you wish to get the necessary tips for your SSL certificate purchase, please visit <a href="https://adverttools.com/how-to-buy-SSL-certificate/" class="text-decoration-none text-primary fw-bold" target="_blank">How to Buy SSL Certificate</a> link.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Important steps when buying your SSL certificate.</h2>
+            <p class="h5">1. Choose your preferred SSL certificate type. Please consider the tips mentioned above for this step.</p>
+            <p class="h5">2. Make a research and decide on your SSL certificate provider. Each service provider has its own plans and benefits.</p>
+            <p class="h5">3. Go to your SSL certificate provider's website and find the plan with your preferred SSL certificate. Press the <b>BUY</b> button next to the plan.</p>
+            <p class="h5">4. Select your preferred timeframe for your SSL certificate expiry. Most service providers offer between one year and five years for validity of the SSL certificate. Please note that the service providers usually issues the certificate for one year and renew it after each year if you bought the certificate for more than one year.</p>
+            <p class="h5">5. Complete the SSL certificate registration form. The most important part in this form is the section where you specify your domain name for which you are buying the SSL certificate. Please do not forget to include <i>*.yourdomain.com</i> as well if you want to buy a wildcard SSL certificate.</p>
+            <p class="h5">6. Choose your preferred payment method and pay the amount. Payment methods usually include Visa / Mastercard Debit / Credit card payment, Paypal, crypto payment etc.</p>
+            <p class="h5">7. Wait for a confirmation email after you make your payment. Look for a link in that email which will direct you to the management dashboard where you can install your SSL certificate.</p>
+            <p class="h5">8. If your domain name registrar and SSL certificate provider is the same company, do not worry after purchase of your SSL certificate. The certificate will automatically be applied to your domain and you can visit your site with <b>https</b> prefix.</p>
+            <p class="h5">9. But if your domain registrar and SSL certificate provider are different companies, then you will need to install your SSL certificate into your web server manually. To learn how to install your SSL certificate, please visit our guide here: <a href="https://adverttools.com/how-to-buy-SSL-certificate/" target="_blank" class="text-decoration-none text-primary fw-bold">How to install your SSL Certificate into your web hosting server</a>.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>SSL Certificate FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How can I know what type of SSL Certificate I need?</p>
+          <p class="aln cor h5">Simply use our SSL Certificate Advisor tool. Answer the questions and the advisor will show the best option for you.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Why the tool asks if I use multiple servers with a single domain?</p>
+          <p class="aln cor h5">Because multiple servers are usually represented as subdomains of the root domain. Requests sent to each subdomain are to be directed to the corresponded backend server.</p>
+          <p class="aln cor h5">If this is the case, you will need a wildcard SSL certificate in order to cover all of your subdomains.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">I have just an informative or a blog website. Do I need an SSL certificate?</p>
+          <p class="aln cor h5">SSL certificate is not just for data encryption. Having SSL certificate also increases your SEO ranking and therefore brings more visitors to your website.</p>
+          <p class="aln cor h5">Plus missing SSL certificate will make your website shown as <b>Not Secure</b> in most internet browsers. This situation can scare away your day-to-day website visitors.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Does a wildcard SSL certificate cover my root domain?</p>
+          <p class="aln cor h5">No, wildcard SSL certificates usually do not cover root domains. You should explicitly include your root domain in the same SSL certificate.</p>
+          <br/>
+        </div>
+{% endblock %}

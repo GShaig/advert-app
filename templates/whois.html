@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Whois Lookup by IP — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Whois Lookup by IP — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Free Whois Lookup Tool. Check your desired domain registration details. Get the registrant name, address, contact details instantly. You can get the contact email and negotiate with the domain owner.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Whois Lookup. Check your desired domain registration details. Get the registrant name, address, contact details instantly. You can get the contact email and negotiate with the domain owner.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/whois/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/whois/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="my ip address whois, whois, whois lookup, whois anonymous, who's my ip, whois my ip, my ip address, whois lookup ip, website, checking go, lookup io, whois lookup ip address, who owns domain whois, who is own domain">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary url shadow-lg cont p-0" href="https://adverttools.com/url-shortener/"><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary ssl shadow-lg cont p-0" href="https://adverttools.com/ssl/"><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/whois/"><img src="/static/images/whois2.svg" alt="whois" width="110%" height="110%" class="child"/><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary hosting shadow-lg cont p-0" href="https://adverttools.com/hosting/"><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary loc shadow-lg cont p-0" href="https://adverttools.com/location/"><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary ip shadow-lg cont p-0" href="https://adverttools.com/ip-lookup/"><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+                <h1 class="text-primary fw-bold">WHOIS Lookup</h1>
+                <form action="" method="get">
+                    <div class="sideBy">
+						{% for field in form.visible_fields %}
+						      {{ field }}
+						{% endfor %}
+                        <pre>     </pre>
+                        <input type="submit" value="Check" class="btn btn-primary btn-lg shadow-lg" />
+                    </div>
+                </form>
+            </div>
+        
+            {% if err %}
+            <div class="bg-success sideBy p-4 m-4">
+              <h2 class="text-white">Domain is not registered. No WHOIS data. Would you like to buy the domain?</h2>
+              <pre> </pre>
+              <a href="https://namecheap.pxf.io/c/3692161/386170/5618?u=https%3A%2F%2Fwww.namecheap.com%2Fdomains%2Fregistration%2Fresults.aspx%3Fdomain%3D{{domain}}" target="_blank" class="btn bg-white text-success btn-lg"><b>Register</b></a>
+            </div>
+            {% endif %}
+
+            {% if w %}
+            <div class="land container">
+            <div class="p-4 m-4 col-lg-8">
+              <h2 class="cor"><b>WHOIS Information</b></h2>
+              <br/>
+              <div class="container">
+                {% for z in d %}
+                <p class="h4 text-success">{{z}}</p>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <br/>
+              <br/>
+              <h2 class="cor"><b>Recent Searches</b></h2>
+              <br/>
+              <ul>
+                {% for a in recents %}
+                <li class="text-success h5">{{a}}</li>
+                {% endfor %}
+              </ul>
+              <a href="https://adverttools.com/recent/" class="text-decoration-none text-secondary h4">View more...</a>
+            </div>
+            </div>
+            {% endif %}
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use WHOIS Lookup Tool?</h2>
+            <p class="h5">To use WHOIS Lookup Tool, just enter your desired domain name to the search box provided above and click on the <span class="text-primary fw-bold">Check</span> button.</p>
+            <p class="h5">You will get the WHOIS lookup results instantly! The information will include the owner of the domain name, the contact details, on which date the domain was registered, the expiry date of the domain name etc.</p>
+            <p class="h5">Sometimes you will see that some information on your WHOIS lookup results are hidden. That is because the domain owner has purchased and enabled domain privacy for that specific domain name.</p>
+            <p class="h5">Please note that you can perform a WHOIS lookup also with an IP address instead of a domain name. The provided information will be a little different and the technical properties of the IP address will also be included in WHOIS lookup results.</p>
+            <p class="h5">If the domain name you are searching for has never been registered before, a green warning will show up with the text <b>Domain name is not registered, yet</b>. There will also be a green <span class="text-success fw-bold">Register</span> button for you in case you wish to buy the domain name.</p>
+            <p class="h5">This WHOIS lookup tool works for all domain extensions and country codes. If you experience issues for a specific domain extension, please let us know.</p>
+            <p class="h5">If you have specific requests or suggestions for the domain owner, please use the contact details of the domain owner, not the domain registrar. If you think the information provided in this tool is inaccurate, please use ICANN Whois Inaccuracy Complaint Form link provided on the check results to report the issue.</p>
+            <p class="h5">You can use this tool to check the information about your own domain name as well. Check if the information about your domain on WHOIS database is up-to-date or not. If the information is not accurate or recent, you can just contact your domain registrar to correct or update your information on the database.</p>
+            <p class="h5">There is no limit how many searches each user perform with the WHOIS lookup tool. If you face any problem related to this tool or if the tool does not work, please report us the situation on <b>info@adverttools.com</b> email address. Thank you!</p>
+            <p class="h5">Do you need more information on what is WHOIS lookup and how does it work? Click on <a href="https://adverttools.com/whois-lookup/" class="text-decoration-none text-primary fw-bold" target="_blank">What is WHOIS Lookup</a> and <a href="https://adverttools.com/use-cases-of-whois-lookup/" class="text-decoration-none text-primary fw-bold" target="_blank">Use Cases of WHOIS Lookup</a> links to get the necessary information.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Top eight interested facts about WHOIS lookup.</h2>
+            <p class="h5">1. It is very easy to put WHOIS lookup on your website. You just need to send API calls in your preferred programming language such as Python, Java, PHP, JavaScript etc. Then receive response, parse and render it on your web page.</p>
+            <p class="h5">2. Most WHOIS APIs accept querying also with an IP address. So, you can both send a domain name or an IP address to request the information about it. But provided information will be a little different when you are querying to get the information about an IP address.</p>
+            <p class="h5">3. Usually WHOIS APIs return an error when you request the information about an unregistered domain name. But some APIs return <b>Domain Not Found</b> response as string. So, you need to write an exception to handle this situation.</p>
+            <p class="h5">4. The registrations of <b>com</b>, <b>org</b> and <b>net</b> domain extensions is handled by Internet Corporation for Assigned Names and Numbers (ICANN).</p>
+            <p class="h5">5. Have you checked the domain status information on your WHOIS lookups before? If you checked it, you would know in some cases domain status shows <b>clientDeleteProhibited</b>, <b>clientTransferProhibited</b> or <b>clientUpdateProhibited</b>. If these domain statutes are enabled, it means that the domain is protected against domain theft. Many domain name registrars provide this as a service to protect their clients from losing their domain names. This service is usually a premium service and incur charges.</p>
+            <p class="h5">6. IANA ID shown on WHOIS lookup results means Internet Assigned Numbers Authority and is like a registration ID for domain registrars.</p>
+            <p class="h5">7. If you are familiar with the common name servers of hosting companies, you can find out the hosting provider of a domain by simply checking its name servers on WHOIS lookup results.</p>
+            <p class="h5">8. Even if the data about a particular domain name is hidden on WHOIS lookup, the email address of the domain registrar is always available and shown on the check results. This is due to the security measure which allows the internet users report the domain name in case of abuse or other unwanted situations.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>WHOIS Lookup FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How can I know who owns a domain?</p>
+          <p class="aln cor h5">Please use our WHOIS Lookup tool. Just enter the domain name in the search box and click on "Check".</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Is WHOIS Lookup free of charge?</p>
+          <p class="aln cor h5">Yes, WHOIS Lookup is completely free. You can check as many domain names as you wish. The sky is the limit!</p>
+          <br/>
+          <p class="aln cor h2 text-danger">What to do if some information about a particular domain name are not shown?</p>
+          <p class="aln cor h5">Some people or companies prefer to hide their information from WHOIS lookup results such as name, address or contact details.</p>
+          <p class="aln cor h5">There is no way to find out the hidden information if domain privacy is enabled for a specific domain name.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">What if the searched domain name is not registered yet?</p>
+          <p class="aln cor h5">If the domain name searched for is not registered yet, a green <span class="text-success fw-bold">Register</span> button will be shown. You can click the button and buy the domain name.</p>
+          <br/>
+        </div>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}What is Elastic Beanstalk?{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is Elastic Beanstalk?">{% endblock %}
+{% block description %}<meta name="description" content="Which AWS cloud services included in Elastic Beanstalk? How to deploy your web application into Elastic Beanstalk environment? Are Elastic Beanstalk services included in Amazon’s Free Tier?">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Which AWS cloud services included in Elastic Beanstalk? How to deploy your web application into Elastic Beanstalk environment? Are Elastic Beanstalk services included in Amazon’s Free Tier?">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/elastic-beanstalk/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/elastic-beanstalk/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="elastic beanstalk, aws, amazon web services, elastic compute, ec2, beanstalk, load balancer, route 53, database, free tier, free tools, free">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">Elastic Beanstalk</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/elastic1.jpg" alt="elastic1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is Elastic Beanstalk?</h2>
+            <p class="h5">
+                Have you ever seen the phrase Elastic Beanstalk on the internet and wonder what does it mean?
+                In this article, we will explain what Elastic Beanstalk is and what is the purpose of using it.
+            </p>
+            <br/>
+            <p class="h5">
+                Elastic Beanstalk is a complete solution for the deployment of different web applications into the cloud hosting environment and it is provided by one of the web hosting provider giants – Amazon Web Services (AWS).
+                Its main target is to offer one stop solution for web application deployments and provide better scalability and security abilities.
+                There are many AWS cloud services included in Elastic Beanstalk environment and each of them is necessary to run a fast and secure website online successfully.
+                Lets explore Amazon’s Elastic Beanstalk deeply and analyze every part of it for a better understanding of its operation.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Which AWS cloud services included in Elastic Beanstalk?</h2>
+            <p class="h5">
+                <b>Elastic Compute Cloud (EC2)</b>: EC2 is a cloud hosting solution provided by Amazon Web Services.
+                Web applications are hosted in virtual containers like Docker. You have wide variety of hosting options on EC2 such as Linux hosting, macOS hosting, Windows hosting, Red Hat hosting and SUSE Linux.
+                In free tier option, EC2 provides 1 vCPU core with 1 GiB memory. It also includes 8 GB of SSD storage.
+                You can initiate a t2.micro or a t3.micro instance as free tier included options.
+            </p>
+            <br/>
+            <p class="h5">
+                <b>Simple Storage Service (S3)</b>: S3 is a storage service associated with Elastic Beanstalk.
+                It is a very powerful storage solution in which even you can host your static website without the need of additional hosting plan or any other services.
+                When you deploy your application to Elastic Beanstalk, all your project files will be archived on S3 storage service due to safety concerns.
+            </p>
+            <br/>
+            <p class="h5">
+                <b>Application Load Balancer (ALB)</b>: ALB provides load balancing service in front of your web application.
+                You can add as many listener as you wish to your elastic load balancer. There are usually at least two listeners in use: one for HTTP on port 80 and the other for HTTPS on port 443.
+            </p>
+            <br/>
+            <p class="h5">
+                <b>Security Groups</b>: Security Group of your EB application enforces security rules and permissions around the Elastic Beanstalk environment.
+                You should be careful in setting up your security policy, especially when setting inbound and outbound rules.
+            </p>
+            <br/>
+            <p class="h5">
+                <b>Auto Scaling Groups</b>: Auto scaling group manages scalability for your EB application.
+                Elastic Beanstalk creates an automatic scaling policy for your environment which you can edit later in the relevant section of your control panel.
+                ASG normally detects increasing traffic to your web application and increase the number of running EC2 containers in your environment.
+                It does this by simply copying the existing instance and creating copies of the instance according to the current demand.
+                If the traffic level comes back to the previous level, auto scaling group removes additional EC2 containers which it created recently and rolls back the number of containers to the initial number.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/elastic2.png" alt="elastic2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What parts does Elastic Beanstalk consist of?</h2>
+            <p class="h5"><b>Application</b>: Application represents your web application on the Elastic Beanstalk environment.</p>
+            <br/>
+            <p class="h5">
+                <b>Environment</b>: Elastic Beanstalk environment is a platform which maintains the interpreter for your preferred programming language, the hosting server operating system files and settings, and the configuration for your EB application.
+                Actually, the environment is a place where all your documents and setting stored, including the log files and application health data.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to deploy your web application into Elastic Beanstalk environment?</h2>
+            <p class="h5">
+                There are several options when it comes to deploying your web application into Elastic Beanstalk environments.
+                But the best option is certainly deployment through EB command line interface. You will have to install AWS CLI and EB CLI in order to be able to apply this option.
+                After setting your preferred EB environment as a default environment, you will just need to run <b>eb deploy</b> command to deploy your application to the EB environment.
+                If you need to connect to the web server and attach configuration files as a root user, you will need to run <b>eb ssh</b> command.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/elastic3.png" alt="elastic3" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Additional services you would need to set up with Elastic Beanstalk?</h2>
+            <p class="h5">
+                If you bought a domain name from different domain registrar and wish to connect the domain to your Elastic Beanstalk environment, the best way is using Route 53 AWS service.
+                You first need to create a hosted zone on Route 53 dashboard and then direct all the nameservers of your domain name to the nameservers shown on the NS record of Route 53.
+                After that your domain will be resolved to your EB application.
+            </p>
+            <br/>
+            <p class="h5">
+                If your web application needs a database, you can add one through Amazon RDS service.
+                Then you can easily connect your database to your Elastic Beanstalk application and add all the parameter values of your database to EB configurations as environment variables.
+                We advise you to choose PostgreSQL database instance when creating your database on Amazon RDS dashboard as it offers high performance and fast data processing abilities.
+            </p>
+            <br/>
+            <p class="h5">
+                If you need a message broker service with your web application, you can easily create one on the Amazon MQ dashboard.
+                AWS offers Apache ActiveMQ and Rabbit MQ as message broker services. All these services are not added by Elastic Beanstalk automatically because they are mostly application specific and depends on your application requirements.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Are Elastic Beanstalk services included in Amazon’s so called Free Tier?</h2>
+            <p class="h5">
+                All the above services mentioned in this article are part of the Amazon Free Tier offer with limited number of hours and requests per month or with data transfer limitations.
+                The only exception is AWS Route 53 which will cost you fifty cents per month per hosted zone.
+            </p>
+        </div>
+{% endblock %}

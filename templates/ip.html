@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Reverse Lookup for IP — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Reverse Lookup for IP — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Get the IP location and other details for your interested IP. Simply copy and paste the IP into the search bar and find out the details about the IP instantly.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Get the IP location and other details for your interested IP. Simply copy and paste the IP into the search bar and find out the details about the IP instantly.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/ip-lookup/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/ip-lookup/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="my ip, whats my ip, reverse ip lookup, reverse ip, website, checking go, what is my ip public, what's my ip public, public ip my, ip lookup, lookup io, whois lookup ip address, whats my ip, what are my ip, reverse ip look up, ip tracker address, ip, whois ip lookup, ip 4 lookup, lookup ip, pings">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary url shadow-lg cont p-0" href="https://adverttools.com/url-shortener/"><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary ssl shadow-lg cont p-0" href="https://adverttools.com/ssl/"><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary whois shadow-lg cont p-0" href="https://adverttools.com/whois/"><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary hosting shadow-lg cont p-0" href="https://adverttools.com/hosting/"><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary loc shadow-lg cont p-0" href="https://adverttools.com/location/"><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/ip-lookup/"><img src="/static/images/ip2.svg" alt="ip" width="110%" height="110%" class="child"/><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+                <h1 class="text-primary fw-bold">IP Lookup</h1>
+                <form action="" method="post">
+                    <div class="sideBy">
+                        {% csrf_token %}
+						{% for field in form.visible_fields %}
+						      {{ field }}
+						{% endfor %}
+                        <pre>     </pre>
+                        <input type="submit" value="Check" class="btn btn-primary btn-lg shadow-lg" />
+                    </div>
+                </form>
+            </div>
+        
+            {% if err %}
+            <div class="bg-warning sideBy p-4 m-4">
+              <h2 class="text-white">Domain is not registered, yet. No Whois data. Would you like to register the domain?</h2>
+              <pre> </pre>
+              <a href="https://namecheap.pxf.io/c/3692161/386170/5618?u=https%3A%2F%2Fwww.namecheap.com%2Fdomains%2Fregistration%2Fresults.aspx%3Fdomain%3D{{domain}}" class="btn bg-white text-warning btn-lg" target="_blank"><b>Register</b></a>
+            </div>
+            {% endif %}
+
+            {% if w %}
+            <div class="p-4 m-4">
+              <h2 class="cor"><b>IP Information</b></h2>
+              <br/>
+              <div>
+                {% for z in c %}
+                <h2 class="text-success">{{z}}</h2>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+            {% if war %}
+            <div class="bg-warning p-4 m-4">
+              <h2 class="text-white">{{ war }}</h2>
+            </div>
+            {% endif %}
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use Reverse IP Lookup Tool?</h2>
+            <p class="h5">Copy the IP address you would like to know about and paste it to the search box provided above. And then click on the <span class="text-primary fw-bold">Check</span> button.</p>
+            <p class="h5">Then wait for a second before you see the information about the IP address you entered. The information includes registered organization (or owner) of an IP address, date of registration, location, contact details etc.</p>
+            <p class="h5">Please note that this IP lookup tool supports only IPv4 type IP address searches. We are planning to add IPv6 support feature in the coming months.</p>
+            <p class="h5">In contrast to WHOIS lookup, IP lookup results include additional information about the technical properties of the searched IP address such as net range, classless inter-domain routing, net name, net handle, net type etc.</p>
+            <p class="h5">IP lookups for some IP addresses will return hidden or very limited information. This is because the IP address you searched for probably belongs to a governmental institution or a strategic governmental agency from one of the countries. The information is restricted because of security concerns.</p>
+            <p class="h5">Typical IPv4 type IP address format is like <i>123.456.789.012</i>. You can learn your IP address simply by clicking on <b>My IP Address</b> button on top left corner of this page.</p>
+            <p class="h5">Did you check your own IP address and see that the provided information is incorrect? No worries! Please contact the relevant IP address authority shown on your check results and ask to update your IP address. There is usually a link to a complaint form to fill and submit for any request. An information update can take several weeks to be shown on the lookup results.</p>
+            <p class="h5">If you got a cyber attack or someone tried to hack you from a known IP address, you should report this IP address abuse to the relevant authorities. In order to do that please use the abuse contact details shown on the relevant IP lookup result.</p>
+            <p class="h5">If you need more detailed information about what is a reverse IP lookup, please click on <a href="https://adverttools.com/reverse-ip-lookup/" class="text-decoration-none text-primary fw-bold" target="_blank">What is Reverse IP Lookup</a> link.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Some important information you will get from the Reverse IP Lookup tool.</h2>
+            <p class="h5"><b>Connected domain name.</b> - If there is a connected domain name to the IP address, the domain will be shown on the IP lookup results.</p>
+            <p class="h5"><b>NetRange</b> - This information shows how many host devices can exist in the network the IP address belongs to.</p>
+            <p class="h5"><b>Classless Inter-Domain Routing (CIDR)</b> - CIDR is the notation for the IP address. There are three types of IP addresses: <i>Class A</i>, <i>Class B</i>, and <i>Class C</i></p>
+            <p class="h5"><b>NetType</b> - The company the IP address is allocated to.</p>
+            <p class="h5"><b>RegDate</b> - Registration date of the IP address.</p>
+            <p class="h5"><b>Updated</b> - The date when the IP address was updated lastly.</p>
+            <p class="h5"><b>org-name</b> - Name of the organization hires the IP address temporarily.</p>
+            <p class="h5"><b>person</b> - The name of the responsible person from the tenant organization.</p>
+            <p class="h5">Please note that if the IP address you are looking for is a reserved IP address for different purposes, the information related to the IP address will be limited.</p>
+            <p class="h5">If you are searching for an IP address connected with a domain and a web server, the results will be similar to Domain Lookup (WHOIS Lookup). But if you enter an IP address associated with a device like internet modem or router which assigned by an internet service provider (ISP), the results will include more technical details that can be understood only by a technical person such as a network engineer or IT helpdesk specialist.</p>
+            <p class="h5">If you enter IPv6 type IP address to this IP lookup tool, the tool will recognize the IPv6 IP address as a domain name due to the text content included in IPv6 IP format. As a result, the tool will tell that the domain name is not registered yet and no data available for your search.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>IP Lookup FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How do I find out the location of a Domain or an IP address?</p>
+          <p class="aln cor h5">Please use our Domain Location tool or Reverse IP Lookup tool to find out the location.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Does reverse IP lookup tool accept IPV6 IP addresses?</p>
+          <p class="aln cor h5">Unfortunately, for now the reverse IP lookup tool does not accept IPv6 IP addresses. We continuously work on the tool and maybe in the near future we will be able to add the IPv6 feature.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Can I include the port number in an IP lookup?</p>
+          <p class="aln cor h5">No, please do not include the port number. Port numbers serve a different purpose and it does not make sense to include them in IP lookups.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">What information is provided during IP lookup?</p>
+          <p class="aln cor h5">Reverse IP Lookup tools provides information about the net range, classless inter-domain routing (CIDR), the organization the IP address is allocated to, the company hired the IP address, contact details and the location of an IP address.</p>
+          <p class="aln cor h5">Please note that some of these information may not be available depending on the IP address you searched for.</p>
+          <br/>
+        </div>
+{% endblock %}

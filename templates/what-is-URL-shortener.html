@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}What is a URL Shortener? — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is a URL Shortener? — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Advantages of a URL Shortener. How to use a URL Shortener. Share your short links from YouTube, Facebook, Instagram, Twitter and many other sites.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Advantages of a URL Shortener. How to use a URL Shortener. Share your short links from YouTube, Facebook, Instagram, Twitter and many other sites.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/what-is-URL-shortener/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/what-is-URL-shortener/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="url shortener, url, short url, short, cool fonts, link into, shor link, short link, youtube short, youtube, url tiny, bitly, tinyurl url, url shortner, url short, url shortcut, website, shorten urls, shortening of url, shorten url, shorten a url">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">What is URL Shortener?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/shortener1.jpg" alt="shortener1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is a URL Shortener?</h2>
+            <p class="h5">URL (Uniform Resource Locator) is a web address link pointing to a specific resource on the internet. A basic example would be <i>https://example.com/videos/example.mp4</i>.</p>
+            <p class="h5">URLs directing to videos, images or posts are usually 20 characters and more in length. As you expect, sharing long URLs is not very convenient and practical. In this situation, the URL Shortener comes in handy.</p>
+            <p class="h5">A URL Shortener makes short links and directs them to the original longer ones that provided by users. Short links are very pretty and your sharing experience will be easy and enjoyable with short URLs.</p>
+            <p class="h5">Sometimes internet users wish to hide their original link for different reasons. In such situation, the URL Shortener can do the job. We call it <b>URL Obfuscation</b>. It is usually practised to prevent third parties to copy or scrape the link.</p>
+            <p class="h5">Short URLs are very important especially if you have limited number of characters to spend like SMS message or Twitter tweets. But in general, short links looks pretty on other social media posts as well such as Facebook, Instagram, YouTube or Reddit posts.</p>
+            <p class="h5">There are many URL shortener services available, both free and paid. Some popular free services include Bitly and TinyURL.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How long we will be able to use the short link?</h2>
+            <p class="h5">We can use the short link as long as the URL redirection in place. URL shortener websites use different technologies to store the redirection values so the link lifetime differs greatly.</p>
+            <p class="h5">A database or a storage used to store link redirections for a URL shortener tool should be durable and consistent in order to achieve longer lifetimes for the links. Poorly managed databases can result in data loss that may cause all link directions to be broken. For this reason, it is a good practice to use a cloud based database or set frequently scheduled backups for your database.</p>
+            <p class="h5">Our URL Shortener uses a database to store all redirections, so you can use our links for almost forever. Enjoy the life of social media and sharing with our <b>HTTPS</b> enabled secure links!</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/shortener2.jpg" alt="shortener2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Working principle of a URL Shortener?</h2>
+            <p class="h5">When you enter the long URL to the search box, URL Shortener saves the URL to the database it is connected with. Then it creates a random short string with 7 characters long. The more characters it uses, the more combinations it can make therefore it can create more short links.</p>
+            <p class="h5">But you need to keep the number of characters low because at the end the resulting link should be short. After that the URL Shortener creates a permalink with the generated string under your domain name. The short link format will be like <i>yourdomain.com/abcd123</i></p>
+            <p class="h5">Then the tool directs the newly created short link to previously provided long URL in order to make sure that whenever a user enters the short link to a browser address bar, the user will end up at the destination provided with the original link.</p>
+            <p class="h5">How URL Shortener do the direction? It simply stores both the short link and the long link in a database table and whenever it gets a <b>GET</b> request with the short link, it directs the user to the long link.</p>
+            <p class="h5">After generating a random string, the URL Shortener checks if the generated string exists in the database. If there is a string matches with the newly generated one, it regenerates the string with new random characters. It is due to avoid the conflict of assigning two different values to the same short link.</p>
+            <p class="h5">Because the database stores only text values, you do not need a big size to store many link directions. 1 GB of storage is more than enough to store almost the infinite number of URLs.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What are the benefits of using a URL shortener?</h2>
+            <p class="h5">- Better sharing experience: There is no doubt you will have a better sharing experience with short links. Especially when you send a long link in a message or in an email, it covers a couple of lines which looks very ugly and unattractive to your potential customers.</p>
+            <p class="h5">- Link tracking: With the help of a URL shortener, you can keep track of your affiliate links which gives you an idea about which products and campaigns doing better in these days and adjust your campaigns and products based on your target audience behaviour.</p>
+            <p class="h5">- Character limits: It is one of the main problems that URL shortener solves. This especially applies to Twitter tweets and SMS messages when you have a limited number of characters to use. With shortened links, you would save characters for your main message.</p>
+            <p class="h5">- Earning from clicks and impressions: Some URL shortener services give you an opportunity to earn money from traffic coming from certain countries or per 1000 clicks. This is not usually a big money, but can cover your domain purchases or website hosting costs.</p>
+            <p class="h5">- Analytics show that a short link leads to a higher click-through rate compared to the long one. If you wish to get the attention of internet users and build a community, you should definitely use a URL shortener for your links.</p>
+        </div>
+{% endblock %}

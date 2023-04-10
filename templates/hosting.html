@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Web Hosting Advisor – Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Web Hosting Advisor – Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Get the best advice about web hosting plans. Enter your web hosting requirements in the form and get your web hosting advice instantly. Shared Hosting, WordPress Hosting, VPS Hosting or Dedicated Server Hosting.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Get the best advice about web hosting plans. Enter your web hosting requirements in the form and get your web hosting advice instantly. Shared Hosting, WordPress Hosting, VPS Hosting, Dedicated Server Hosting">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/hosting/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/hosting/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="web hosting, hosting, wordpress, vps, shared, accept credit, website, internet design">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary url shadow-lg cont p-0" href="https://adverttools.com/url-shortener/"><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary ssl shadow-lg cont p-0" href="https://adverttools.com/ssl/"><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary whois shadow-lg cont p-0" href="https://adverttools.com/whois/"><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/hosting/"><img src="/static/images/hosting2.svg" alt="hosting" width="110%" height="110%" class="child"/><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary loc shadow-lg cont p-0" href="https://adverttools.com/location/"><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary ip shadow-lg cont p-0" href="https://adverttools.com/ip-lookup/"><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+                <h1 class="text-primary fw-bold">Web Hosting</h1>
+
+                {% if best %}
+                <div class="bg-success p-4 m-4">
+                  <h2 class="text-white">Best web hosting for you:</h2>
+                  <h2 class="text-white"><b>{{ best }}</b></h2>
+                  <a href="{{ link }}" class="btn bg-white text-success btn-lg" target="_blank"><b>Get {{ best }}</b></a>
+                </div>
+                {% endif %}
+
+                {% if feedback %}
+                <div>
+                  <form action="" method="post">
+                      <div class="land">
+                        {% csrf_token %}
+                        <div>
+						  <h5 class="text-primary">What kind of website do you plan on hosting?</h5>
+                          {{ form.site }}
+                          <br/>
+                          <h5 class="text-primary">What type of hosting you need?</h5>
+                          {{ form.serv }}
+                        </div>
+                        <pre>     </pre>
+                        <div>
+                          <h5 class="text-primary">What is your estimated number of site visitors per month?</h5>
+                          {{ form.visitor }}
+                          <br/>
+                          <br/>
+                          <br/>
+                          <h5 class="text-primary">How much content (images, video, zip files, etc.) do you plan on hosting?</h5>
+                          {{ form.content }}
+                        </div>
+                      </div>
+                      <br/>
+                      <input type="submit" value="Send" class="btn btn-primary btn-lg shadow-lg aln" />
+                  </form>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use Web Hosting Advisor Tool?</h2>
+            <p class="h5">In the above form, choose the options which best suits your web hosting needs.</p>
+            <p class="h5">- Firstly, specify what type of website you plan to build.</p>
+            <p class="h5">- Then tell us what kind of hosting you need for your website.</p>
+            <p class="h5">- How much monthly traffic you expect for your website?</p>
+            <p class="h5">- What size of storage you need with your hosting plan?</p>
+            <p class="h5">After answering all the questions, simply click on <span class="text-primary fw-bold">Send</span> button. After that you will get the best web hosting plan tailored for your needs.</p>
+            <p class="h5">Web Hosting Advisor tool analyses your situation and needs to find out the best web hosting solution for you. Please take into account that the tool makes the decision entirely based on your answers.</p>
+            <p class="h5">Please note that this tool is not a hundred percent accurate. Evaluate your situation and requirements carefully before buying your web hosting plan.</p>
+            <p class="h5">Under the web hosting package name, you will find a green <span class="text-success fw-bold">BUY</span> button which will direct you to <a class="text-decoration-none fw-bold" target="_blank" href="https://namecheap.pxf.io/2rZ2gG">Namecheap</a> website where you can buy your web hosting package with a couple of clicks.</p>
+            <p class="h5">If you face any problem after buying a web hosting package from our partner, please contact us through our <a href="https://adverttools.com/contact/" target="_blank" class="text-decoration-none text-primary">Contact</a> page. If you wish to receive a couple of advices before buying your web hosting plan, we are more than happy to help you on this matter as well.</p>
+            <p class="h5">For more information on web hosting plans and how to buy a hosting package, visit our <a href="https://adverttools.com/web-hosting-explained/" class="text-decoration-none text-primary fw-bold" target="_blank">What is a Web Hosting</a> and <a href="https://adverttools.com/how-to-buy-hosting/" class="text-decoration-none text-primary fw-bold" target="_blank">How to Buy Web Hosting</a> pages.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Top eight tips about getting the best hosting you can buy.</h2>
+            <p class="h5">1. Analyze the hosting types and get the most suitable hosting for you. Do not spend more money on VPS or dedicated server hosting if a shared hosting plan is enough for you.</p>
+            <p class="h5">2. If you use a content management system, choose the hosting plan based on your CMS. For example, if you plan to use WordPress content management system to build and develop your site, get a WordPress hosting plan. Almost all web hosting providers offer WordPress specific hosting plans these days.</p>
+            <p class="h5">3. Always stick to SSD type storage and get the storage size which is enough for your website content.</p>
+            <p class="h5">4. Try to get a hosting plan without any resource and traffic limits. It seems as an unimportant detail when you first buy a hosting plan to build your website. But it will certainly create an extra headache when it comes to scaling up your website. Your increased traffic will hit the bandwidth limit or the hosting provider will charge you extra money for exceeding your traffic limit.</p>
+            <p class="h5">5. If you are buying a VPS or dedicated server hosting, check the included processor and memory capacities. Just like a personal computer, higher RAM memory and processor level will increase the speed and processing power of your VPS server. Get at least 2 vCPUs and 2 GiB of total RAM memory to be able to survive and handle your daily traffic properly in this modern age of technology.</p>
+            <p class="h5">6. Buy a web hosting package includes as many website products as possible. For example, one domain name and a couple of email accounts are usually included in most web hosting plans.</p>
+            <p class="h5">7. Do not buy expensive hosting plans. Make a market price research beforehand. For instance, a shared hosting plans are usually priced between $20 and $60 per year.</p>
+            <p class="h5">8. Prefer one of the most popular and reputable hosting providers if the price range is suitable for you.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>Web Hosting FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How can I find the best hosting plan for my website?</p>
+          <p class="aln cor h5">Please use our Web Hosting Advisor. Fill the form with your answers to specific questions and</p>
+          <p class="aln cor h5">the advisor will tell you the most suitable web hosting plan for your needs.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Is a WordPress hosting same with a shared hosting?</p>
+          <p class="aln cor h5">Yes, usually a WordPress hosting is a shared hosting plan with WordPress installed beforehand. But you can also install WordPress content management system in your VPS or dedicated server hosting plans.</p>
+          <p class="aln cor h5">You are not allowed to install any software on a shared hosting. That is why web hosting providers install WordPress CMS in a shared hosting and call it WordPress hosting.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Is it compulsory to use content management systems when you buy a shared hosting?</p>
+          <p class="aln cor h5">No. If you are a Developer or you have coding skills, you can develop your own website. Most of the shared hosting providers a build specific environment for each of popular programming languages where you can develop and run scripts and microservices.</p>
+          <p class="aln cor h5">They usually provide support for <b>Python</b>, <b>Java</b>, <b>PHP</b>, <b>C</b>, <b>.NET</b>, <b>Perl</b>, <b>Golang</b>, and other popular programming languages.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">If I need root access to my server, which hosting plan is the best for me?</p>
+          <p class="aln cor h5">If you need to connect to your server through SSH as a root user (shell access) in order to install different packages or make server configurations, you should definitely go with VPS or dedicated hosting plans.</p>
+          <p class="aln cor h5">Most of the shared hosting providers does not provide root access (shell access) to clients due to security and privacy concerns.</p>
+          <br/>
+        </div>
+{% endblock %}

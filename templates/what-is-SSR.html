@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}What is Server Side Rendering? (SSR){% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is Server Side Rendering? (SSR)">{% endblock %}
+{% block description %}<meta name="description" content="Why Server Side Rendering (SSR) important? How SSR impact your SEO ranking? The best rendering option for SEO ranking.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Why Server Side Rendering (SSR) important? How SSR impact your SEO ranking? The best rendering option for SEO ranking.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/what-is-SSR/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/what-is-SSR/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="server side rendering, ssr, web server, server, client side rendering, web page, webpage rendering, website, website rendering">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">What is SSR?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/server1.jpg" alt="server1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is Server Side Rendering (SSR)?</h2>
+            <p class="h5">Have you ever encountered with the word SSR? It stands for Server Side Rendering in web development terminology. But what does Server Side Rendering actually mean? In order to understand the meaning and working principle of SSR, a person should have at least a basic knowledge of website development and web page rendering. Lets start with a short explanation about web rendering.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is a web rendering?</h2>
+            <p class="h5">When we enter the domain of any website on the address bar of our web browser and try to reach the website, the browser send an HTTP request to the web server where the website is hosted. It is usually a GET request including a site URL and a couple of headers.</p>
+            <p class="h5">After this request reaches the web server, the server sends a response based on our GET request. When this response is rendered on our browser screen, then we can see the web page we wish to go on our monitor. This process is simply called a web rendering.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Two types of web rendering.</h2>
+            <p class="h5">There are two types of web rendering: Server Side Rendering (SSR) and Client Side Rendering (CSR). But what is a server and client? A server is simply the web server where the website is hosted. A client is a web browser which is used to connect to the website. In Client Side Rendering, the web rendering process is happening on the client side by a web browser.</p>
+            <p class="h5">The browser gets a response from the web server and renders it on the screen for us. In Server Side Rendering, web rendering happens in the server side and our web browser gets a rendered web page to show it on the monitor.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Common properties of Client Side Rendering.</h2>
+            <p class="h5">-	Rendered in the web browser side.</p>
+            <p class="h5">-	Uses a lot of JavaScript queries and functions on the front end.</p>
+            <p class="h5">-	Usually, a web framework or library is used for front end.</p>
+            <p class="h5">-	Used when front side information processing, data visualization, events, or actions required.</p>
+            <p class="h5">-	A client side web framework is used to control the communication between the client and the server.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/server2.jpg" alt="server2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Common properties of Server Side Rendering.</h2>
+            <p class="h5">-	Rendered in the web server where the website is hosted.</p>
+            <p class="h5">-	Mostly uses static templates for web page rendering.</p>
+            <p class="h5">-	Minimal front end programming is required.</p>
+            <p class="h5">-	All information rendered on the browser screen is sent by the web server such as data visualization or static files like images.</p>
+            <p class="h5">-	The server is responsible for controlling all the HTTP requests and sending responses for those requests.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">The working principle of SSR.</h2>
+            <p class="h5">The working principle of SSR is very simple. An online user sends an HTTP request with his / her web browser and this request is received by the web server. Any input value or form submission data got from this request is processed on the web server level with the help of the programming language was used to develop this web application.</p>
+            <p class="h5">After that, an HTTP response is sent back with the relevant output value and data received from the information processing. This response is rendered on the web server before it is sent to the corresponding web browser.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What are some popular examples of web frameworks that implement Server Side Rendering?</h2>
+            <p class="h5"><b>WordPress CMS</b>: The most popular content management system in the world is using server side rendering method for the delivery of its exceptional and unique content.</p>
+            <p class="h5"><b>Python Django Framework</b>: Django framework is a Python based full stack web framework which helps you to easily built your web application. It adopts server side rendering as a web rendering method to offer fast website loading times and higher SEO ranking for your website. Its technology receives an HTTP request, directs it to the matching URL and picks the relevant HTML template to send as a response to the HTTP request.</p>
+            <p class="h5"><b>Vue.js JavaScript Framework</b>: Vue.js is a JavaScript front end web framework to be used to apply server side rendering method to web applications built on different backend technologies. You can easily use it with Laravel PHP framework, or with NodeJS to make your web application to be rendered on the web server side.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Why is SSR so important for your SEO ranking?</h2>
+            <p class="h5">Server Side Rendering is very important for SEO ranking due to the fact that even the most modern search engines like <b>Google</b>, <b>Bing</b>, <b>Yahoo</b>, and <b>Yandex</b> have difficulties in crawling the websites prefer client side rendering as their web rendering method.</p>
+            <p class="h5">It is because the crawl bots do not use a web browser to render a web page before they can crawl it. Therefore, crawlers usually read a client side rendered website as a blank web page. And this situation kills your search engine results page (SERP) ranking for the obvious reason.</p>
+            <p class="h5">If a web crawler can not read your website, then it can not send the meta data and the content of your website to the search console. As a result, your web pages are not indexed and thus, they are not shown on the search engine results pages.</p>
+        </div>
+{% endblock %}

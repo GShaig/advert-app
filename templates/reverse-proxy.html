@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}What is a Reverse Proxy? — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is a Reverse Proxy? — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="What are the most important functions of a reverse proxy? What is a load balancer? What are the best reverse proxy providers?">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="What are the most important functions of a reverse proxy? What is a load balancer? What are the best reverse proxy providers?">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/reverse-proxy/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/reverse-proxy/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="reverse proxy, proxy, proxy server, load balancer, web server, server, proxy network, nginx, nginx reverse proxy">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">What is a Reverse Proxy?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/proxy1.jpg" alt="proxy1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is a Reverse Proxy server?</h2>
+            <p class="h5">
+                A reverse proxy is a server in between the web browser of a user and your web server.
+                It usually receives HTTP requests from internet users and directs them to different backend servers based on the web URLs attached to them.
+                It is like an intermediary gateway between the internet and the server where your website is hosted.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What are the most important functions of a reverse proxy?</h2>
+            <p class="h5">
+                1.	<b>Caching static files</b>: In some cases, a reverse proxy is able to cache the static files of your website.
+                In such situation the proxy server will be able to serve the static files to your users without the need to request the files from your web server.
+                This increases the speed of your site significantly and of course provides a better user experience.
+            </p>
+            <p class="h5">
+                2.	<b>Higher level of SSL encryption</b>: If you have already installed an SSL certificate to your website, a reverse proxy provides SSL acceleration for better encryption abilities.
+                It ensures encryption in the proxy server level and relieves your web server from the heavy work of encryption.
+            </p>
+            <p class="h5">
+                3.	<b>Protection against security issues</b>: A reverse proxy server protects your website from several security issues including DDoS attacks.
+                It prevents direct access to your web server by internet users and obfuscates the web server in order to hide the core information.
+            </p>
+            <p class="h5">
+                4.	<b>Redirect HTTP requests</b>: This is the main duty of a typical reverse proxy server.
+                It gets HTTP requests from the users and directs them to the relevant backend servers.
+                If your company uses subdomains to reference different servers in the data center, a reverse proxy redirects HTTP requests according to their subdomain on the URL information.
+                Multiple servers can also be represented with permalinks under the root domain.
+            </p>
+            <p class="h5">
+                5.	<b>Provide basic authentication</b>: If you do not any authentication method in place for HTTP requests, a reverse proxy may be able to attach a basic HTTP authentication to your web server.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is a load balancer?</h2>
+            <p class="h5">
+                A load balancer is like a reverse proxy server, but focuses only on the workload perspective of a reverse proxy.
+                If there are many client requests coming to your website or there is a sudden spike on the traffic going to your website, a load balancer accepts all the HTTP requests and redirects them to your different web servers by dividing the workload equally.
+                This prevents any one of the servers to be overwhelmed or going down during the day to day operations of your website.
+                If somehow one of your servers is down or simply does not work for a while, the load balancer directs the requests to other operational servers in order to prevent the interruptions or down time on your site.
+                If there is a new server added to the network of web servers, a load balancer automatically includes the new server in the network and redirects the related requests to that server immediately.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What are the best reverse proxy providers in the market?</h2>
+            <p class="h5">
+                <b>Nginx</b>, <b>Npm</b>, <b>Swag</b>, and <b>Caddy</b> are among the most popular reverse proxy server providers.
+                Nginx is the best and most functional reverse proxy. In order to setup Nginx as your reverse proxy server, you need to first install Nginx HTTP server software to your web server.
+                Then you will have to create a configuration file named <b>nginx.conf</b> where you should specify all the direction conditions based on the request URL.
+                After uploading the configuration file to the server, Nginx reverse proxy will start function and redirect all incoming HTTP requests according to your rules.
+                Please find a sample of nginx.conf file below.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/proxy2.png" alt="proxy2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <p class="h5">Please note that your application server and main server software may be the different one than your reverse proxy server.</p>
+        </div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}What is GitHub? How to use it?{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is GitHub? How to use it?">{% endblock %}
+{% block description %}<meta name="description" content="How to deploy your development project to GitHub? The most common issues when deploying to GitHub. Best practices when deploying commercial projects to GitHub.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="How to deploy your development project to GitHub? The most common issues when deploying to GitHub. Best practices when deploying commercial projects to GitHub.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/github/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/github/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="git, github, deploy, gitlab, deploy code, github.com, fork, star, repository, coding, project">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">GitHub</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/github1.jpg" alt="github1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is GitHub?</h2>
+            <p class="h5">
+                <b>GitHub</b> is a web platform where you can deploy the source code of your IT projects. It is like a social media platform but instead of your photos or videos, you share your development projects there.
+                We call these projects repositories on GitHub. A repository usually contains a whole project, including the backend and frontend of your project.
+                A project can have many files with codes written in many different programming languages. A repository shows the main programming language it was written in under the repository name and description.
+                Just like on social media platforms, other people can give a star to your project, comment or download the project.
+                People normally try their best to get as many stars as they can for their repositories and always tend to give and receive many comments.
+                A good GitHub profile proves your previous experience and career path and can lead to a good job offer if the potential hirers who screening your profile are satisfied with your projects.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Is GitHub free to use for everyone?</h2>
+            <p class="h5">
+                 Yes, GitHub is a free and open source platform for all developers from all over the world. GitHub provides free hosting service to host your repositories and codes on the platform.
+                 You are free to create as many repositories as you wish. The size limit for a repository is also generous at 100 gigabytes.
+                 All actions and events on GitHub like forking and starring are also free of charge providing that you have all the necessary permissions from the project owner.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to deploy your development project to GitHub?</h2>
+            <p class="h5">
+                Deploying your code to GitHub platform is very easy. First you need to create a repository on GitHub.
+                There are two types of repositories: <b>Public</b> and <b>Private</b> repository. If you want your project to be visible to GitHub users, then create a public repository.
+                Otherwise, you should create a private repository. Give a name to your repository and write a brief description.
+                If you try to deploy your existing project with a <b>README</b> and <b>.gitignore</b> files, do not create these files when start your repository.
+                Then choose what type of license you wish to add to your repository in order to inform other users about how they can use your project.
+                Then click on <b>Create repository</b> button to create your repository. Then you will have several options to deploy your code to the repository.
+                If you try to push your existing project to GitHub, you will need to install <b>Git</b> command line interface (CLI) before sending Git commands on your computer terminal.
+                Then you should set your GitHub repository as a remote origin for your deployments and run <b>git push</b> command to deploy your source code to the repository you created before.
+                After that you will find all your project files inside your GitHub repository.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/github2.png" alt="github2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">The most common issues when deploying to GitHub.</h2>
+            <p class="h5">
+                -	One of the most common issues you can face when deploying your project to a GitHub repository is pushing unnecessary files or cache files with your deployments.
+                    This kind of issue will create an unwanted crowd on your GitHub repository and increase the size of the repository for no reason.
+                    In order to avoid this problem, you should add all unnecessary file extensions to your <b>.gitignore</b> file on your project.
+                    GitHub will ignore all the files, directories and the file extensions added to the .gitignore file when deploying your project to your GitHub repository.
+                    As a result, you will get a much cleaner and more useful repository on your profile.
+            </p>
+            <p class="h5">
+                -	Another commonly made mistake when deploying to GitHub is deploying the files including login credentials and different secret keys.
+                    Even though some users see this situation as a big problem, this is actually a serious security leak.
+                    Stolen credentials and keys can have huge damage to businesses or individuals. Do not forget, safety should be the number one priority for you.
+                    In order to prevent this situation, make sure you removed or hashes the sensitive information on your project files.
+                    For more information, please refer to <a href="https://www.gitguardian.com/" target="_blank" class="text-decoration-none text-primary fw-bold">Git Guardian</a> initiative started by GitHub managers.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/github3.svg" alt="github3" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Best practices when deploying commercial projects to GitHub.</h2>
+            <p class="h5">
+                First of all, it is advised that to deploy commercial projects as a private repository. You can still share your private repository with your partners and collaborators by sending the link of the repository to them.
+                It will just not be visible to other users on GitHub. It is also recommended that you do not push the files with sensitive data or with any information that can be classified as a business secret together with your project files.
+                If you wish to deploy the project as a whole, you should first remove the sensitive information in the project files before deploying your project.
+                Remember, it is not helpful at all removing the sensitive data after pushing your project to a GitHub repository. Even though you removed the data after you deployed your project, the data will still be visible to GitHub users through the history of repository commits.
+                If you mistakenly deployed sensitive data to a GitHub repository, consider deleting the repository and creating it again or deleting all the previous commits of the repository.
+                After that, you can push your revised project files to the repository without making the old files visible to other users.
+                If you do not know how to delete the previous commits of a repository, please refer to the GitHub documentation on this link: <a href="https://docs.github.com/" target="_blank" class="text-decoration-none text-primary fw-bold">GitHub Documentation</a>
+            </p>
+        </div>
+{% endblock %}

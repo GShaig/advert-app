@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}What is Content Delivery Network? (CDN){% endblock %}
+{% block ogtitle %}<meta property="og:title" content="What is Content Delivery Network? (CDN)">{% endblock %}
+{% block description %}<meta name="description" content="The working principle of CDN. The most significant benefits of a content delivery network. What are the most popular CDN providers?">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="The working principle of CDN. The most significant benefits of a content delivery network. What are the most popular CDN providers?">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/content-delivery-network/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/content-delivery-network/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="content delivery network, cdn, caching, cache, storage, cloudflare, cloudflare cdn, amazon cloudfront, aws">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">What is CDN?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/content1.jpg" alt="content1" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What is Content Delivery Network (CDN)?</h2>
+            <p class="h5">
+                You have seen the word Content Delivery Network or CDN in your hosting plan and do not know what does it mean?
+                Do not worry! Today we are going to explain what a Content Delivery Network is and why it is important for your security and your overall SEO ranking.
+            </p>
+            <br/>
+            <p class="h5">
+                Content Delivery Network is a network of web servers located in all over the world. All famous CDN providers usually have a couple of data centers in each continental.
+                This is for covering as many countries in the world as possible.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">The working principle of CDN.</h2>
+            <p class="h5">
+                When you deploy your web application to an online web server, all the files of your application including scripts, settings, configuration files, and static files like templates, photos, and CSS styling files are uploaded to the web server.
+                But that server or data center is located in one location and serving all those files from that location regardless of from which country the user visits your website.
+                If the country where the user coming from is very far from the server, the loading and response times of your website will be slow.
+                A content delivery network stores all the files of your website in multiple servers located in different parts of the world and makes it easier for your users from all over the world to enter and surf on your website without any issue.
+                This is not only benefit you get from CDN. Lets look at the potential benefits you may receive when using a content delivery network.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">The most significant benefits of a content delivery network.</h2>
+            <p class="h5">
+                1.	<b>Protection against DDoS attacks</b>: A content delivery network is a great way to protect your website against DDoS attacks.
+                Distributed denial of service (DDoS) attack is a special type of cyber attack where hackers direct very high level of junk internet traffic to your website in order to break down or crash the website.
+                CDN absorbs this fake traffic spike and secure your website against any kind of breakdown.
+            </p>
+            <br/>
+            <p class="h5">
+                2.	<b>Reduced data transfer costs</b>: The majority of web hosting providers impose data transfer and bandwidth limits.
+                You should always try to reduce the number of requests sent to your web server.
+                When you use a content delivery network, most of the requests are handled by CDN and the static files of your website are not needed to be transferred with every request made by the users.
+                Content delivery network caches all the static files and serves them from its servers when it is necessary to do so.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/content2.jpg" alt="content2" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <p class="h5">
+                3.	<b>Increased up time and reliability</b>: Down time is the biggest drawback when it comes to website reliability and reputation.
+                CDN is a great solution to this problem. Since a typical content delivery network has many servers spread all over the world, if one of the servers or your main server is down, it serves the files of your website from another server.
+                In this way, your users do not experience any interruption during their visits to your website.
+            </p>
+            <br/>
+            <p class="h5">
+                4.	<b>Higher performance</b>: Fast loading times play a crucial role in the performance and SEO ranking of your website.
+                Your site can be fast for the users from the same country where your web server is located. But it is obvious that it will not keep the same performance for the users coming to your website from overseas.
+                CDN has many data centers in different continents and countries of the world. By using a content delivery network, your website can achieve the same performance in every country of the world as it does in the country where your web server is located.
+                Additionally, a content delivery network will function as a load balancer and prevent your main web server to be loaded with tons of traffic.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What are the most popular CDN providers?</h2>
+            <p class="h5">
+                The most popular content delivery network providers can be listed as Cloudflare, Amazon CloudFront, Microsoft Azure CDN, and Google Cloud CDN.
+                Among all of them, the Cloudflare is the most trusted one. Content delivery network service usually comes with high costs.
+                For example, Cloudflare CDN Pro version is 20 dollars per month, which makes two hundred and forty dollars per year.
+                This price is quite high for individual website owners who normally spend well below fifty dollars per year for hosting solutions.
+                Luckily, there is also a free plan provided by Cloudflare CDN. The free package usually lacks a few premium features, but it still includes many basic content delivery network features which is enough for the website owners with tighter budgets.
+                In order to integrate your website with their free plan, you should either direct the name servers of your domain name to their name server, or you should confirm your website ownership by simply copy pasting a special HTML code into your web pages.
+            </p>
+        </div>
+{% endblock %}

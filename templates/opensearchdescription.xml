@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Search Domains</ShortName>
+  <Description>[Search engine full name and summary]</Description>
+  <InputEncoding>[UTF-8]</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://adverttools.com/static/favicon/favicon.ico?</Image>
+  <Url type="text/html" template="https://adverttools.com/"/>
+  <Url type="application/x-suggestions+xml" template="https://adverttools.com/opensearchdescription.xml"/>
+  <moz:SearchForm>https://adverttools.com/</moz:SearchForm>
+</OpenSearchDescription>

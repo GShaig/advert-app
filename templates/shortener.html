@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Free URL Shortener — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Free URL Shortener — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Share your short links from YouTube, Facebook, Instagram, Twitter and many other sites. Just enter your link and you will get the short link instantly.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Share your short links from YouTube, Facebook, Instagram, Twitter and many other sites. Just enter your link and you will get the short link instantly.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/url-shortener/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/url-shortener/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="url shortener, url, short url, short, cool fonts, link into, shor link, short link, youtube short, youtube, url tiny, bitly, tinyurl url, url shortner, url short, url shortcut, website, shorten urls, shortening of url, shorten url, shorten a url">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/url-shortener/"><img src="/static/images/url2.svg" alt="shortener" width="110%" height="110%" class="child"/><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary ssl shadow-lg cont p-0" href="https://adverttools.com/ssl/"><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary whois shadow-lg cont p-0" href="https://adverttools.com/whois/"><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary hosting shadow-lg cont p-0" href="https://adverttools.com/hosting/"><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary loc shadow-lg cont p-0" href="https://adverttools.com/location/"><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary ip shadow-lg cont p-0" href="https://adverttools.com/ip-lookup/"><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+                <h1 class="text-primary fw-bold">URL Shortener</h1>
+                <form action="" method="post">
+                    <div class="sideBy">
+                        {% csrf_token %}
+						{% for field in form.visible_fields %}
+						      {{ field }}
+						{% endfor %}
+                        <pre>     </pre>
+                        <input type="submit" value="Shorten" class="btn btn-primary btn-lg shadow-lg" />
+                    </div>
+                </form>
+            </div>
+        
+            {% if errors %}
+            <div>
+              <p>{{errors}}</p>
+            </div>
+            {% endif %}
+
+            {% if new_url %}
+            <div class="bg-success p-4 m-4">
+              <h2 class="text-white">Your short URL</h2>
+              <p class="text-white">You can copy the Link below and share it with your friends:</p>
+              <p class="text-white"><b>{{new_url}}</b></p>
+              <p class="text-white"><span>Previous URL:   </span> {{long_url}}</p>
+            </div>
+            {% endif %}
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use URL Shortener Tool?</h2>
+            <p class="h5">Using our URL shortener tool is as easy as copy paste action. Just copy the URL you want to make short and paste it inside the search box provided above. Then click on <span class="text-primary fw-bold">Shorten</span> button and that's it!</p>
+            <p class="h5">Wait for 1 second and your shortened link will be ready for you! You can copy and share it with your friends or put it on your social media posts such as Facebook, Twitter, Instagram, YouTube or Reddit posts!</p>
+            <p class="h5">Your old link also will be shown at the bottom just in case if you forgot which URL did you enter to the tool. There is no limit, so you can create as many links as you wish!</p>
+            <p class="h5">The short URL format for this URL Shortener is <i>adverttools.com/*******</i>.</p>
+            <p class="h5">Our URL shortener tool creates <b>SSL</b> protected and <b>HTTPS</b> enabled links. So do not worry about your security.</p>
+            <p class="h5">You do not need to use <i>https://</i> part in the generated short links. Remove that part and make your link even shorter. Then your link format will be like that <b>adverttools.com/*******</b>.</p>
+            <p class="h5">You can put the same link into the tool twice or more and all the short links will direct you to the same URL.</p>
+            <p class="h5">We do not put any click or time limit to the links generated in this URL shortener tool. If your short link is broken or simply does not work, please contact us on <b>info@adverttools.com</b> email address.</p>
+            <p class="h5">Please note that any generated short link directed to the social media profiles will not take you to your profile unless you log in again with your login credentials. These links will direct you to the login screen of the relevant website due to missing authentication.</p>
+            <p class="h5">It is prohibited to use this URL shortener to redirect internet users to any scam or malicious website. If it is identified that a specific short link generated in this tool directs the traffic to unsafe website for the users, the link will be deleted and will not be available anymore.</p>
+            <p class="h5">Do not create the short version of already shortened links. This will only put you into the loop of redirections :)</p>
+            <p class="h5">If you need more information about how this URL shortener tool works, please click on <a href="https://adverttools.com/what-is-URL-shortener/" class="text-decoration-none text-primary fw-bold" target="_blank">What is URL Shortener</a>.</p>
+        </div>
+        <br/>
+        <br/>
+            <div class="container">
+                <h2 class="text-primary">Top five tips for being on the safe side when using a URL shortener.</h2>
+                <p class="h5"><b>Avoid domains look like scams</b>. Do not jump in to a URL shortener tool with a scammy domain name like <i>shooortlinks.com</i> or <i>shorturlll.net</i>. This kind of websites will probably create a link to a scam or malicious resources and will hurt you or your friends and audience.</p>
+                <p class="h5"><b>Test your short link immediately after creating it</b>. Be the first user of your newly generated short link. But be careful! Enter your short link only in incognito window and if the link directs you to a different website than your original one, do not click on any button on the website. Immediately close the window and never ever visit that website again.</p>
+                <p class="h5"><b>Use a link scam or phishing checker tool</b>. There are tons of URL checker tools on the internet. After creating your short link on a URL shortener, just use one of the genuine link checker services to be sure of that the link is safe to use for you and your audience.</p>
+                <p class="h5"><b>Use HTTPS enabled and secured websites</b>. Use URL shortener tools only on the HTTPS enabled and SSL certificate installed websites. Because in this way, every time a user clicks on your short link, the transaction between the user and the final destination website will be encrypted and secured. For your information, <b>adverttools.com</b> is HTTPS enabled and protected with a wildcard SSL certificate.</p>
+                <p class="h5"><b>Be careful about the website you use</b>. Create your short links only with the URL shortener on a genuine and trusted website. And do not use temporary websites. Otherwise, the website might become unavailable or offline after some time. If this is the case, your short links will be broken or will throw <i>404 - Not Found</i> error every time they are used.</p>
+            </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>URL Shortener FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How to use the URL Shortener tool on this website?</p>
+          <p class="aln cor h5">It is very easy! Just copy and paste your long URL (web link) to the search box and click on "Shorten".</p>
+          <br/>
+          <p class="aln cor h2 text-danger">How long the provided short link will be available to use?</p>
+          <p class="aln cor h5">We could say the provided short link will be available for lifelong, but as you know the internet is very vibrant and dynamic place.</p>
+          <p class="aln cor h5">Your short link will be available as long as <a href="https://adverttools.com/" class="text-decoration-none text-primary fw-bold">adverttools.com</a> is live and operating.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Is there a daily limit for using this URL Shortener?</p>
+          <p class="aln cor h5">No, you can use this URL Shortener service for unlimited times. There is <b>no</b> any daily or number limits.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Can I use generated links without <b>HTTP</b> or <b>HTTPS</b> prefix?</p>
+          <p class="aln cor h5">Yes, you can use the provided link without <b>HTTP</b> or <b>HTTPS</b> par. Just like this <i>adverttools.com/*******</i>.</p>
+          <br/>
+        </div>
+{% endblock %}

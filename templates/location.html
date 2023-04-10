@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Website Domain Location — Advert Tools{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Website Domain Location — Advert Tools">{% endblock %}
+{% block description %}<meta name="description" content="Get the domain location for your interested domains. Simply put the domain in search bar and instantly get the location of the domain.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="Domain Location Lookup. Get the domain location for your interested domains. Simply put the domain in search bar and instantly get the location of the domain.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/location/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/location/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="domain location, location, what is my zip code, ip by address, website, checking go, lookup io, what's my ip, checkers, geo ip locator, location ip address, geolocate ip, pings, ip locate, ip locator, ip locations">{% endblock %}
+
+{% block content %}
+    <h1 class="aln text-primary fw-bold">FREE TOOLS</h1>
+    <div class="container-fluid d-grid gap-2 ms-1">
+        <nav class="navbar">
+          <a class="btn but btn-block btn-outline-primary search shadow-lg cont p-0" href="https://adverttools.com/"><h4 class="conter">DOMAIN SEARCH</h4></a>
+          <a class="btn but btn-block btn-outline-primary url shadow-lg cont p-0" href="https://adverttools.com/url-shortener/"><h4 class="conter">URL SHORTENER</h4></a>
+          <a class="btn but btn-block btn-outline-primary ssl shadow-lg cont p-0" href="https://adverttools.com/ssl/"><h4 class="conter">SSL CERTIFICATE</h4></a>
+          <a class="btn but btn-block btn-outline-primary whois shadow-lg cont p-0" href="https://adverttools.com/whois/"><h4 class="conter">WHOIS LOOKUP</h4></a>
+          <a class="btn but btn-block btn-outline-primary hosting shadow-lg cont p-0" href="https://adverttools.com/hosting/"><h4 class="conter">WEB HOSTING</h4></a>
+          <a class="btn but btn-block btn-outline-primary acti shadow-lg cont p-0 active" href="https://adverttools.com/location/"><img src="/static/images/loc2.svg" alt="loc" width="110%" height="110%" class="child"/><h4 class="conter">DOMAIN LOCATION</h4></a>
+          <a class="btn but btn-block btn-outline-primary email shadow-lg cont p-0" href="https://adverttools.com/email/"><h4 class="conter">BUSINESS EMAIL</h4></a>
+          <a class="btn but btn-block btn-outline-primary ip shadow-lg cont p-0" href="https://adverttools.com/ip-lookup/"><h4 class="conter">REVERSE IP LOOKUP</h4></a>
+        </nav>
+      </div>
+      <br/>
+      <div>
+            <div class="m-4">
+                <h1 class="text-primary fw-bold">Domain Location</h1>
+                <form action="" method="post">
+                    <div class="sideBy">
+                        {% csrf_token %}
+						{% for field in form.visible_fields %}
+						      {{ field }}
+						{% endfor %}
+                        <pre>     </pre>
+                        <input type="submit" value="Check" class="btn btn-primary btn-lg shadow-lg" />
+                    </div>
+                </form>
+            </div>
+        
+            {% if err %}
+            <div class="bg-warning sideBy p-4 m-4">
+              <h2 class="text-white">Domain is not registered. No location data. Would you like to buy the domain?</h2>
+              <pre> </pre>
+              <a href="https://namecheap.pxf.io/c/3692161/386170/5618?u=https%3A%2F%2Fwww.namecheap.com%2Fdomains%2Fregistration%2Fresults.aspx%3Fdomain%3D{{domain}}" target="_blank" class="btn bg-white text-warning btn-lg"><b>BUY</b></a>
+            </div>
+            {% endif %}
+
+            {% if w %}
+            <div class="land container">
+            <div class="bg-success p-4 m-4 col-lg-8">
+              <h2 class="text-white"><b>Location Information</b></h2>
+              <br/>
+              <div>
+                {% for z in info %}
+                <h2 class="text-white">{{z}}</h2>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <br/>
+              <br/>
+              <h2 class="cor"><b>Recent Searches</b></h2>
+              <br/>
+              <ul>
+                {% for a in recents %}
+                <li class="text-success h5">{{a}}</li>
+                {% endfor %}
+              </ul>
+              <a href="https://adverttools.com/recent/" class="text-decoration-none text-secondary h4">View more...</a>
+            </div>
+          </div>
+            {% endif %}
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to use Domain Location Tool?</h2>
+            <p class="h5">It is very easy! Just type in your interested domain name to the search box provided above and click on the <span class="text-primary fw-bold">Check</span> button.</p>
+            <p class="h5">The results will be shown instantly! You will see the domain name registered country, state, city, postcode, and (if available) the exact address where the domain name is registered in.</p>
+            <p class="h5">In some cases, the city, postcode, or address information about the domain name will be hidden. This happens mostly for the open address information. Some organizations and governmental agencies hide their address information from domain lookups due to the security concerns.</p>
+            <p class="h5">Please note that the address information shown on the domain location lookup tool result may not be the exact address of the domain owner or the organization the domain name registered for. It is rather the address of the server where the domain name is hosted, in most cases.</p>
+            <p class="h5">The address information shown on this tool may be the old address of a person or an organization. For more recent address information, you should always refer to the domain website.</p>
+            <p class="h5">Some locations shown on the Domain Location lookup will be available as an exact open address, but in the other ones only country, city and state information will be accessible. Some parts in some domains are hidden depending on the domain owner preferences.</p>
+            <p class="h5">Did you check your domain location and see that the address information is inaccurate or outdated? Please contact your domain registrar to correct or update your address information on WHOIS database.</p>
+            <p class="h5">Please be aware of that this domain location tool uses alpha-2 country codes to represent the country name in the provided location information. If you so not know what is alpha-2 country code or you are not familiar with its terminology, please visit this page <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" class="text-decoration-none text-primary fw-bold" target="_blank">Alpha 2 Country Codes</a>. Please note that alpha-2 country codes are the same with the domain extension country codes. For example, <b>.us</b> is the country domain extension for the United States and <b>US</b> is the alpha-2 country code again for the United States.</p>
+            <p class="h5">If you think that the location information provided in this tool is not accurate or irrelevant, please report the case to us on <b>info@adverttools.com</b> email address. Thank you for your contributions.</p>
+            <p class="h5">If you need more detailed information about domain location lookups, please do not hesitate to visit our <a href="https://adverttools.com/domain-location/" class="text-decoration-none text-primary fw-bold" target="_blank">Why to Check Domain Location</a> page.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Important points to take into account when checking a domain location.</h2>
+            <p class="h5">- If you wish to learn the address of the company who owns the domain name, the domain location lookup tool may not be a proper solution for you. Because in some cases this tool shows the address of the data center where the website is hosted or the headquarter of the domain registrar.</p>
+            <p class="h5">- Occasionally the address information for a specific domain name will be hidden. This is because of a privacy setting enabled by the domain owner. But the country and state information will always be visible for you.</p>
+            <p class="h5">- When you enter your domain name in this tool, the address shown on the screen might be different from your actual address. You may see the address of your domain registrar or the address of your hosting service provider.</p>
+            <p class="h5">- If you enter a domain name without a domain extension on this tool, you will see the address information for the same domain with the <b>.com</b> domain extension. To see the address information for the domains with a domain extension other than <b>.com</b>, please explicitly specify the domain extension.</p>
+            <p class="h5">- This tool does not support location lookup for subdomains. We understand that the subdomain of a domain name can represent a different server with a different location. But this tool supports the location lookups only for root domains for now.</p>
+            <p class="h5">- If the requested domain name is not registered yet, a yellow warning will be shown on the screen with the note <span class="text-warning">Domain is not registered.</span>. There will also be a <b>BUY</b> button next to the warning in order to make it easier for you to purchase the domain name in case you wish to buy it.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+          <h1 class="faqs aln cor"><b>Domain Location FAQs</b></h1>
+          <br/>
+          <p class="aln cor h2 text-danger">How do I find out the location of a Domain or an IP address?</p>
+          <p class="aln cor h5">Please use our Domain Location tool or Reverse IP Lookup tool to find out the location.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">What information the domain location lookup provides?</p>
+          <p class="aln cor h5">The domain location lookup tool provides country, state, city, postcode, and if available, the exact address information for the domain name.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">What does mean <b>Redacted for Privacy</b>?</p>
+          <p class="aln cor h5"><b>Redacted for Privacy</b> phrase means the domain owner or company have got domain privacy to hide the location information from lookup results.</p>
+          <br/>
+          <p class="aln cor h2 text-danger">Is the location information 100% accurate?</p>
+          <p class="aln cor h5">Please note that the location information provided in this tool is not guaranteed to be 100% accurate. This situation can have many different reasons.</p>
+          <p class="aln cor h5">The provided address information can belong to the domain registrar instead of the domain owner or simply it can be the address of the servers where the domain is hosted.</p>
+          <br/>
+        </div>
+{% endblock %}

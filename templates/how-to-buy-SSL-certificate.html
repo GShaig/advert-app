@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Top five tips for getting an SSL certificate.{% endblock %}
+{% block ogtitle %}<meta property="og:title" content="Top five tips for getting an SSL certificate.">{% endblock %}
+{% block description %}<meta name="description" content="What to consider when buying an SSL certificate? Important steps when buying your SSL certificate. How to install your SSL Certificate into your web hosting server.">{% endblock %}
+{% block ogdesc %}<meta property="og:description" content="What to consider when buying an SSL certificate? Important steps when buying your SSL certificate. How to install your SSL Certificate into your web hosting server.">{% endblock %}
+{% block url %}<meta property="og:url" content="https://adverttools.com/how-to-buy-SSL-certificate/">{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://adverttools.com/how-to-buy-SSL-certificate/" />{% endblock %}
+{% block keywords %}<meta name="keywords" content="SSL, SSL certificate, secure socket layer, top five tips, buy SSL, buy SSL certificate, important steps, how to install SSL, install SSL certificate">{% endblock %}
+
+{% block content %}
+        <h1 class="text-primary fw-bold aln">How to buy SSL certificate?</h1>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/ssl4.jpg" alt="ssl4" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">What to consider when buying an SSL certificate?</h2>
+            <p class="h5">- Root domain, subdomain or wildcard SSL certificate: It is important to decide which type of SSL certificate you need. Free SSL certificate providers usually do not issue a wildcard SSL certificate. Please note that you should include your root domain in your certificate if you buy a wildcard SSL certificate. Because your root domain is not a subdomain, therefore a wildcard SSL certificate does not automatically include the root domain.</p>
+            <p class="h5">- <b>DV</b> (Domain Validation), <b>OV</b> (Organization Validation) or <b>EV</b> (Extended Validation) certificate: The decision for choosing a domain, organization or extended validation usually depends on your project. In most cases you will need a domain validated SSL certificate, even if that domain is connected to your company website. It is because your activity is important, not your status. Even e-commerce websites mostly do not need an organization level validation.</p>
+            <p class="h5">- Certificate expiry: The duration for the offered SSL certificate will stay active is another important factor. Obviously the longer time is covered, the better. Most of the SSL certificate providers offer a discounted price for extended years. For example, you can buy 3 years coverage for the price of 2 years.</p>
+            <p class="h5">- SSL certificate provider: Choosing your SSL certificate provider is very important. You probably do not want to face issues like internet browsers do not recognize your certificate or gaps between your certificate renewals. In order to tackle this kind of problems you should choose a popular and reputable service provider. Please read reviews about each SSL certificate provider and choose wisely.</p>
+            <p class="h5">- Certificate price: Price is again one of the main factors for choosing your service. SSL certificate providers usually charges between $5 to $150 per year based on your preferred certificate type. So make your calculations and do not run out of budget.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">Top five tips for getting an SSL certificate.</h2>
+            <p class="h5">1. Be careful about your domain formation. If you use many subdomains for your website, try to get a wildcard SSL certificate to cover them.</p>
+            <p class="h5">2. Do not buy organization validated or extended validated SSL certificates if domain validation is enough for you. It is enough for almost 80% of all websites.</p>
+            <p class="h5">3. Check the validity before buying the certificate. Most service providers offer minimum 1 year coverage. It can be extended with auto-renewals from the provider side.</p>
+            <p class="h5">4. Be aware of that some SSL certificate providers issue faulty certificate which none of the internet browsers can recognize the certificate. Use the services of one of the reputable SSL certificate providers like Comodo, DigiCert, GlobalSign, AlphaSSL etc.</p>
+            <p class="h5">5. Average SSL certificate price varies between $5 and $150 per year depending on the type of the certificate. Sometimes web hosting providers include SSL certificate in their hosting plans.</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="cont">
+            <img src="/static/images/ssl3.jpg" alt="ssl3" class="phot" />
+        </div>
+        <br/>
+        <br/>
+        <div class="container">
+            <h2 class="text-primary">How to install your SSL Certificate into your web hosting server.</h2>
+            <p class="h5">If you bought your SSL certificate from your web hosting provider, the installation process will be pretty straightforward. Just follow the instructions provided from your service provider. You can install your SSL certificate with a couple of clicks, and you are good to go!</p>
+            <p class="h5">If your SSL certificate provider is different from your web hosting provider, please follow below steps to install your SSL certificate into your web server.</p>
+            <br/>
+            <p class="h5">1. Install your SSL certificate from the dashboard provided on your SSL provider website. The installed file usually is a <b>ZIP</b> archive including <b>Certificate</b>, <b>Private Key</b>, and <b>CA bundle</b> files in the archive.</p>
+            <p class="h5">2. Extract the above mentioned files from the ZIP archive to your personal computer.</p>
+            <p class="h5">3. If you use a web hosting control panel like <b>cPanel</b>, <b>Plesk</b>, or <b>Webmin</b> to manage your web server, it is pretty easy to install your SSL certificate into your web server. Just head to <b>SSL/TLS</b> section of your control panel and copy-paste the content of your certificate files into the relevant boxes and click on <b>Save</b> button. Your website is now secured and <b>HTTPS</b> enabled. You do not need to follow the steps after this step.</p>
+            <p class="h5">4. If you do not have a web hosting panel like mentioned above, you will have to upload your SSL certificate files to your web server manually. This step varies depending on your server software type. There are mainly two types of most common web server software: Nginx and Apache HTTP server. Read your web server software instructions to find out the recommended naming conventions for your <b>certificate.crt</b>, <b>private.key</b>, and <b>cabundle.crt</b> files. Rename your files accordingly.</p>
+            <p class="h5">5. Upload your certificate files to the root folder of your web server.</p>
+            <p class="h5">6. Make the necessary configurations based on the software running on your web server. For example, for Apache HTTP server, the configuration file is named <b>.htaccess</b>, and for Nginx server the configuration file is named <b>nginx.conf</b>.</p>
+            <br/>
+            <p class="h5">Do not worry if your SSL certificate is not reflected immediately or your website is still shown as "Not Secure" by web browsers. After following all these steps, please wait for a couple of hours before checking your website with <b>https://</b> enabled URL.</p>
+        </div>
+{% endblock %}
